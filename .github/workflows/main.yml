@@ -24,10 +24,11 @@ jobs:
 
       - run: npm cache clean --force
       - run: npm install --legacy-peer-deps
+      - run: npm audit fix --force
+      - run: npm audit fix --force
       - run: npm install -g @angular/cli > /dev/null
       - run: ng build    
-      - run: npm audit fix --force
-      - run: npm audit fix --force
+    
       
       - name: Deploy to development-server
         uses: easingthemes/ssh-deploy@v5.0.0
