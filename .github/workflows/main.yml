@@ -26,7 +26,7 @@ jobs:
       - name: Deploy to development-server
         uses: easingthemes/ssh-deploy@v5.0.0
         env:
-          #SSH_PRIVATE_KEY: ${{ secrets.STAGE_SSH_PRIVATE_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.STAGE_SSH_PRIVATE_KEY }}
           SOURCE: "dist/*"
           REMOTE_HOST: ${{ secrets.STAGE_SSH_HOST }}
           REMOTE_USER: ${{ secrets.STAGE_SSH_USERNAME }}
