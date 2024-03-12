@@ -31,7 +31,7 @@ jobs:
         uses: easingthemes/ssh-deploy@v5.0.0
         env:
           SSH_PRIVATE_KEY: ${{ secrets.STAGE_SSH_PRIVATE_KEY }}
-          SOURCE: "dist/*"
+          SOURCE: "dist/angular-conduit/*"
           REMOTE_HOST: ${{ secrets.STAGE_SSH_HOST }}
           REMOTE_USER: ${{ secrets.STAGE_SSH_USERNAME }}
           REMOTE_PORT: ${{ secrets.STAGE_PORT }}
