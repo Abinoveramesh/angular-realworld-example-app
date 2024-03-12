@@ -22,6 +22,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
+      - run: npm cache clean --force
+      - run: npm install --legacy-peer-deps
+      - run: npm install -g @angular/cli > /dev/null
+      - run: ng build    
 
       - name: Deploy to development-server
         uses: easingthemes/ssh-deploy@v5.0.0
